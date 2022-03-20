@@ -1,0 +1,316 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+#battlefield{
+    background-image: url(../img/8hraz5qzkn07.jpg); /*bron: https://forums.totalwar.com/discussion/275368/appreciation-troy-battlefield-is-based-on-archeological-and-geographical-evidence */
+    background-repeat: no-repeat;
+    background-size: auto;
+    overflow: hidden;
+}
+
+#zeus{
+    position: absolute; 
+    height: 100%;
+    top: 20%;
+    left: 3%;
+}
+
+#zeusimg{
+    height: 400px;
+    float: left;    
+}
+
+#healthzeus{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+#poseidon{
+    position: absolute;
+    left: 68%;
+    height: 100%;    
+    top: 12%;
+}
+
+#poseidonimg{
+    height: 600px;
+    float: right;
+}
+
+#healthposeidon{
+    position: absolute;
+    top: 1%;
+    left: 75%;
+    
+}
+
+
+progress{
+    width: 400px;
+    height: 50px;
+}
+
+
+#shape1r{
+    height: 8.5%;
+    width: 20%;
+    background-color:white;
+    border-radius: 50px;
+    position: relative;
+    top: 20%;
+    right: 12%;
+}
+
+#shape2r{
+    height: 8.5%;
+    width: 20%;
+    background-color:white;
+    border-radius: 50px;
+    position: relative;
+    top: 24%;   
+    right: 21%;
+}
+
+#shape3r{
+    height: 8.5%;
+    width: 20%;
+    background-color:white;
+    border-radius: 50px;
+    position: relative;
+    top: 28%;
+    right: 21%;
+}
+#shape4r{
+    height: 8.5%;
+    width: 20%;
+    background-color:white;
+    border-radius: 50px;
+    position: relative;
+    top: 32%;
+    right: 12%;
+}
+
+#shape1l{
+    height: 9%;
+    width: 20%;
+    background-color:white;
+    border-radius: 50px;
+    position: absolute;
+    top: 0%;
+    left: 85%;
+}
+#shape2l{
+    height: 9%;
+    width: 20%;
+    background-color:white;
+    border-radius: 50px;
+    position: absolute;
+    top: 12%;
+    left: 95%;
+}
+#shape3l{
+    height: 9%;
+    width: 20%;
+    background-color:white;
+    border-radius: 50px;
+    position: absolute;
+    top: 24%;
+    left: 95%;
+}
+#shape4l{
+    height: 9%;
+    width: 20%;
+    background-color:white;
+    border-radius: 50px;
+    position: absolute;
+    top: 36%;
+    left: 85%;
+}
+
+.icon{
+    position: absolute;
+    width: 60%;
+    top: 20%;
+    left: 20%;
+}
+
+.onzichtbaar{
+    display: none;
+}
+
+.zichtbaar{
+    display: inherit;
+}
+
+.aandebeurt .wapen{
+    display: none;
+}
+#wave{
+    width: 280px;
+    height: 180px;
+    position: absolute;
+    left: 19%;
+    top: 35%;
+    visibility: hidden;
+    z-index: 1;
+}
+
+#wave.wave{
+    animation: wave 1.5s ease-in;
+}
+
+@keyframes wave{
+
+    0%{
+        transform: translateX(10%);
+        visibility: visible;
+    }
+    50%{
+        transform: translateX(-1300px) translateY(-350px) scale(2); 
+        visibility: visible;
+    }
+    52%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+#bolt{
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    transform:rotate(-8deg) ;
+    left: 12%;
+    top: -600px;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#bolt.bolt{
+    animation: bolt 1.5s ease-in;
+}
+
+@keyframes bolt{
+
+    0%{
+        visibility: visible;
+    }
+    50%{
+        transform: translateY(600px) scale(2); 
+        visibility: visible;
+    }
+    52%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+#zeuswin{
+    color:red;
+    font-size: 100px;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    visibility: hidden;
+    z-index: 3;
+}
+
+#poswin{
+    color:red;
+    font-size: 100px;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.poseidonwins{
+    animation: poswin 2s ease-in;
+    background-image: url(../img/confetti.gif); /*bron: mapje uit de les */
+    background-size: cover;
+}
+@keyframes poswin{
+
+    0%{
+        visibility: hidden;
+    }
+    1%{
+        visibility: visible;
+    }
+    50%{
+        transform:  scale(2); 
+    }
+    99%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+.zeuswins {
+    animation: zeuswin 2s ease-in;
+    background-image: url(../img/confetti.gif);/*bron: mapje uit de les */
+    background-size: cover;
+}
+@keyframes zeuswin{
+
+    0%{
+        visibility: hidden;
+    }
+    1%{
+        visibility: visible;
+    }
+    50%{
+        transform:  scale(2.5); 
+    }
+    99%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+#overlay {
+    position: fixed; 
+    display: none; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:gray; 
+    opacity: 70%;
+    z-index: 2; 
+    cursor: pointer; 
+  }
+
+  #refresh{
+    position: absolute;
+    top: 65%;
+    left: 45%;
+    color: #fff;
+	text-decoration: none;
+	background: #ed3330;
+	padding: 45px;
+	border-radius: 5px;
+	display: inline-block;
+	border: none;
+	transition: all 0.4s ease 0s;
+    visibility: hidden;
+    z-index: 4;
+}
+
+.playAgain{
+    visibility: visible !important;
+}
